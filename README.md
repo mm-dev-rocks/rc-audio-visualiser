@@ -3,7 +3,7 @@
 ### To visualise audio, we need access to PCM (Pulse-Code modulation) data
 
 > **For real-time visuals, we need access to real-time PCM data**  
-> Eg: In Flutter I'll use a package which will periodically provide me with byte arrays (or similar) for the currently-playing audio
+> Eg: In Flutter I'll use a package (maybe [soloud](https://pub.dev/packages/flutter_soloud)) which will provide a stream of byte arrays (or similar) for the currently-playing audio
 
 PCM is what we're used to seeing in audio editors: a bunch of numbers, each representing a sample.
 
@@ -62,12 +62,13 @@ done with machine learning but not real-time on normal devices.
 
 With help of an FFT, we can take a small chunk of audio and work out which sine waves (frequencies) are present, and how powerful each is.
 
-- An FTT gives us very detailed output that we can then group into more useful bands (eg sub-bass, bass, mids, highs)
-- Each of those bands can then be used to drive a different visual element
-
 ---
 
 # FFTs
+
+- An FTT outputs very detailed frequency info
+- We can then group into bands we're interested in (eg **sub-bass**, **bass**, **mids**, **highs**)
+- Each of those bands can then be used to drive a different visual element
 
 > The FFT gives us a breakdown of how strongly-represented each frequency band is in a given _window_
 
