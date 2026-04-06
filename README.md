@@ -149,7 +149,7 @@ Raw FFTs on a rectangular chunk of samples produce artefacts at the edges (becau
 - The difference between the highest and lowest points on (let's say) a y axis
 
 ### Pitch/frequency 
-- How long it takes for the point to repeat
+- How long it takes for the cycle to repeat 
 
 ### Complex numbers
 
